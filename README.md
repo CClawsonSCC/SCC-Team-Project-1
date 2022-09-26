@@ -1,4 +1,4 @@
-# SCC Team Project 1
+# SCC Team Project 1 - Addition of Two Polynomials
 
 Meet the Team:</br>
 Connor Clawson</br>
