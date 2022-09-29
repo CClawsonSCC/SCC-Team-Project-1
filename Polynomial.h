@@ -23,8 +23,8 @@ Term::Term(const int& coefficient, const int& exponent): coefficient(coefficient
 class Polynomial {
 public:
 private:
-	/*A Term of Polynomial*/
-	struct Term;
+	
+	
 
 };
 #endif
