@@ -23,7 +23,7 @@ void Parser::calculate_result()
 string Parser::print()
 {
 	string result = "";
-	
+
 	return result;
 }
 
