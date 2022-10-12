@@ -4,26 +4,26 @@
 /* A Term contains the exponent and coefficient of Polynomial */
 class Term {
 public:
-	// Constructor
-	Term();
-	Term(const int); // Exponent is 0
-	Term(int = 1, const int = 1); // Copy constructor
+    // Constructor
+    Term(int = 0, int = 0); // Default constructor
 
-	// Getters 
-	int get_coefficient() const;
+    // Getters
+    int get_coefficient() const;
+    int get_exponent() const;
 
 
-	// Setters
-	void set_coefficient(int);
+    // Setters
+    void set_coefficient(int);
 
-	// Operator
-	bool operator == (const Term& other) const;
-	bool operator < (const Term& other) const;
-
+    // Operator
+    bool operator == (const Term& other) const; //heck whether the current equal to other term using exponent
+    bool operator < (const Term& other) const; //Check whether the current less than other term using exponent
+    Term operator + (const Term& other) const; // Add in another Term with the same exponent
 private:
-	//Data fields
-	int coefficient; // Stores coefficient of Polynomial
-	const int exponent; // Stores exponent of Polynomial
+    //Data fields
+    int coefficient; // Stores coefficient of Polynomial
+    int exponent; // Stores exponent of Polynomial
 };
 
 #endif // !TERM_H
+
