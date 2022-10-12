@@ -8,10 +8,8 @@ void Parser::add()
 
 void Parser::assign_first(const string in_string)
 {
-	read_input(in_string, poly1);
-=========
 	read_input(in_string, poly1); // this will assign terms to the chosen list
->>>>>>>>> Temporary merge branch 2
+
 }
 
 void Parser::assign_second(const string in_string)
@@ -23,20 +21,10 @@ void Parser::calculate_result()
 {
 	// iterate through the result array and write the result of each term to the string.
 }
-	// FIXME: explore the possibility of passing through an ostream instead of returning a string.
-	string result = "this string will be replaced by the result.";
-
-	return result;
-}
+	
 
 // Private Functions
 
-	return result;
-}
-=========
-	
-	return result;
-}
 
 void Parser::read_input(const string in_string, list<int> polynomial) // Should return Term;
 {
@@ -73,10 +61,3 @@ void Parser::read_input(const string in_string, list<int> polynomial) // Should 
 		}
 	}
 }
-
-			// get the substring of the entire value and convert it to an int
-			value = stoi(in_string.substr(i, i + value_size));
-		};
-	}
-}
->>>>>>>>> Temporary merge branch 2
