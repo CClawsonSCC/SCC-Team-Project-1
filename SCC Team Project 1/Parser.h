@@ -21,5 +21,6 @@ private:
 	list<int> poly2;
 	list<int> results;
 
-	void read_input(const string, list<int>);
+	void read_input(const string, list<int>&);
+	void insert(int, list<int>&);
 };
