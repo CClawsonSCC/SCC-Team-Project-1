@@ -57,7 +57,7 @@ string Parser::print()
  * @param in_string - User input string.
  * @param polynomial - the list to record the polynomial to.
 */
-void Parser::read_input(const string in_string, list<int>& polynomial)
+void Parser::read_input(const string in_string, list<Term>& polynomial)
 {
 	int coeficient = 0;
 	int exponent = 0;
@@ -106,6 +106,6 @@ void Parser::read_input(const string in_string, list<int>& polynomial)
  * @param polynomial - linked list of polynomials.
  * @todo: create and test this function.
 */
-void Parser::insert(int term, list<int>& polynomial)
+void Parser::insert(int term, list<Term>& polynomial)
 {
 }

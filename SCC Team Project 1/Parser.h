@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Term.h"
+
 #include <list>
 #include <string>
 
@@ -17,10 +19,10 @@ public:
 
 private:
 	//replace <int> with <Term> soon.
-	list<int> poly1;
-	list<int> poly2;
-	list<int> results;
+	list<Term> poly1;
+	list<Term> poly2;
+	list<Term> results;
 
-	void read_input(const string, list<int>&);
-	void insert(int, list<int>&);
+	void read_input(const string, list<Term>&);
+	void insert(int, list<Term>&);
 };
