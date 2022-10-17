@@ -5,5 +5,7 @@ Connor Clawson</br>
 Git Manager, UML Diagram Illustrator.
 
 Lubaba Masangu
+Menu class.
 
 Thanhdat Nguyen
+Term class, Documentation.
