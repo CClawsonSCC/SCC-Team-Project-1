@@ -18,8 +18,7 @@ void Parser::add()
 */
 void Parser::assign_first(const string in_string)
 {
-	read_input(in_string, poly1); // this will assign terms to the chosen list
-
+	read_input(in_string, poly1); // this will assign terms to the chosen list.
 }
 
 /**
