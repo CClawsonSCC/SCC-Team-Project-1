@@ -1,3 +1,5 @@
+#include "Parser.h"
+
 #include <iostream>
 
 using namespace std;
@@ -14,7 +16,11 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello, World!" << endl;
+	Parser parser;
+
+	parser.assign_first("13x^2+9");
+
+	cout << parser.print() << endl;
 
 	system("pause");
 	return 0;
