@@ -18,9 +18,12 @@ int main()
 {
 	Parser parser;
 
-	parser.assign_first("10x^3+19");
+	string something = "123b";
+	int num = stoi(something.substr(0, 3));
 
-	cout << parser.print() << endl;
+	parser.assign_first("-158x^33-11");
+
+	cout << parser.print() << " " << num << endl;
 
 	system("pause");
 	return 0;
