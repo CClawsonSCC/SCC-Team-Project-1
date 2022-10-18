@@ -18,7 +18,7 @@ int main()
 {
 	Parser parser;
 
-	parser.assign_first("13x^2+9");
+	parser.assign_first("10x^3+19");
 
 	cout << parser.print() << endl;
 
