@@ -61,7 +61,15 @@ string Parser::print()
 	string result_str = "";
 	for (list<Term>::iterator it = poly1.begin(); it != poly1.end(); it++)
 	{
-		result_str.append(to_string(it->get_coefficient()) + "x^" + to_string(it->get_exponent()) + "+");
+		if ((it != poly1.begin()) && (it->get_coefficient() > 0))
+		{
+			result_str.append("+");
+		}
+		result_str.append(to_string(it->get_coefficient()));
+		if (it->get_exponent() != 0)
+		{
+			result_str.append("x" + (it->get_exponent() != 1 ? ("^" + to_string(it->get_exponent())) : ""));
+		}
 	}
 	
 
@@ -78,6 +86,7 @@ string Parser::print()
 */
 void Parser::read_input(const string in_string, list<Term>& polynomial)
 {
+	//Todo Implement powers of 1 support.
 	int coeficient = 0;
 	int exponent = 0;
 	bool is_negative = false;

@@ -21,7 +21,7 @@ int main()
 	string something = "123b";
 	int num = stoi(something.substr(0, 3));
 
-	parser.assign_first("-158x^33-11");
+	parser.assign_first("1x^3+11x^1+5");
 
 	cout << parser.print() << " " << num << endl;
 
