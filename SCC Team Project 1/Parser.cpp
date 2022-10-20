@@ -94,28 +94,28 @@ void Parser::read_input(const string in_string, list<Term>& polynomial)
 		else if (element == '^') { is_exponent = true;}
 		else if ((element >= '0') && (element <= '9')) // Character is a numeric value
 		{
-			size_t j = i;
-			size_t value_size = 0;
-			// We are going to iterate through the numbers
-			while ((in_string.at(j) >= '0') && (in_string.at(j) <= '9'))
+			int val = in_string.at(i) - 48;
+			while ((i != in_string.size() - 1) && ((in_string.at(i + 1) >= '0') && (in_string.at(i + 1) <= '9')))
 			{
-				value_size++;
-				j++;
-				if (j == in_string.size()) { break; }
+				i++;
+				val = (val * 10) + (in_string.at(i) - 48);
 			}
-
-			int val = stoi(in_string.substr(i, value_size)) * (is_negative ? -1 : 1);
+			
+			val *= is_negative ? -1 : 1;
+			
 			if (is_exponent) { exponent = val; }
 			else { coeficient = val; }
 
-			if (is_exponent) { //insert(Term(coeficient, exponent), polynomial);
+			if (is_exponent) 
+			{ 
+				//insert(Term(coeficient, exponent), polynomial);
 				polynomial.push_back(Term(coeficient, exponent));
 			}
 
 			// if we are at the end of the string or the next character is + or -...
 			else if ((i == in_string.size() - 1) ||
 				((in_string.at(i + 1) == '+') || (in_string.at(i + 1) == '-')))
-			{
+			{    
 				// term is a whole number or last number
 				//insert(Term(coeficient, 0), polynomial);
 				polynomial.push_back(Term(coeficient, 0));
@@ -124,45 +124,6 @@ void Parser::read_input(const string in_string, list<Term>& polynomial)
 			is_exponent = false;
 			is_negative = false;
 		}
-
-		//switch (element)
-		//{
-		//case '-':
-		//	is_negative = true;
-		//	break;
-		//case '+':
-		//	is_negative = false;
-		//	break;
-		//case '^':
-		//	is_exponent = true;
-		//	break;
-		//default: // get the substring of the entire value and convert it to an int
-		//	if ((element >= '0') && (element <= '9')) // Character is a numeric value
-		//	{
-		//		// We are going to iterate through the numbers
-		//		for (; i < in_string.size() - 1; i++) { value_size++; }
-		//		
-		//		if (is_exponent) { exponent = stoi(in_string.substr(i, i + value_size))* (is_negative ? -1 : 1); }
-		//		else { coeficient = stoi(in_string.substr(i, i + value_size)) * (is_negative ? -1 : 1);	}
-
-		//		value_size = 0;
-
-		//		if (is_exponent) { //insert(Term(coeficient, exponent), polynomial);
-		//			polynomial.push_back(Term(coeficient, exponent));
-		//		}
-
-		//		// if we are at the end of the string or the next character is + or -...
-		//		else if ((i == in_string.size() - 1) || 
-		//			((in_string.at(i + 1) == '+') || (in_string.at(i + 1) == '-')))
-		//		{
-		//			// term is a whole number or last number
-		//			//insert(Term(coeficient, 0), polynomial);
-		//			polynomial.push_back(Term(coeficient, 0));
-		//		}
-		//		
-		//		is_exponent = false;
-		//	}
-		//}
 	}
 }
 
