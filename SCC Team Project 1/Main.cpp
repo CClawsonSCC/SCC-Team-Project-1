@@ -18,12 +18,9 @@ int main()
 {
 	Parser parser;
 
-	string something = "123b";
-	int num = stoi(something.substr(0, 3));
+	parser.assign_first("9x^2-x^2");
 
-	parser.assign_first("1x^3+11x^1+5");
-
-	cout << parser.print() << " " << num << endl;
+	cout << parser.print() << endl;
 
 	system("pause");
 	return 0;

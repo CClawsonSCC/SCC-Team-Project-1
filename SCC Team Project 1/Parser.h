@@ -11,7 +11,6 @@ using std::string;
 class Parser
 {
 public:
-	void add();
 	void assign_first(const string);
 	void assign_second(const string);
 	void calculate_result();
