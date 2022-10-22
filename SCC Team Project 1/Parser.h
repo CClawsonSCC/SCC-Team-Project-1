@@ -11,7 +11,6 @@ using std::string;
 class Parser
 {
 public:
-	void add();
 	void assign_first(const string);
 	void assign_second(const string);
 	void calculate_result();
@@ -22,7 +21,8 @@ private:
 	list<Term> poly1;
 	list<Term> poly2;
 	list<Term> results;
-
+	list<int> something;
+	
 	void read_input(const string, list<Term>&);
-	void insert(int, list<Term>&);
+	void insert(Term, list<Term>&);
 };
