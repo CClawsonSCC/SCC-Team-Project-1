@@ -30,9 +30,12 @@ void Parser::assign_second(const string in_string)
 */
 void Parser::calculate_result()
 {
-	list<Term>::iterator i, j;
-
-
+	results = poly1;
+	while (!poly2.empty())
+	{
+		insert(poly2.front(), results);
+		poly2.pop_front();
+	}
 }
 
 /**
@@ -41,7 +44,8 @@ void Parser::calculate_result()
 */
 string Parser::print()
 {
-	if (poly1.empty()) // Polynomial is empty.
+	
+	if (results.empty()) // Polynomial is empty.
 	{
 		return "Empty Polynomial.";
 	}
@@ -50,9 +54,9 @@ string Parser::print()
 	// polynomial is NOT empty.
 	
 	string result_str = "";
-	for (list<Term>::iterator it = poly1.begin(); it != poly1.end(); it++)
+	for (list<Term>::iterator it = results.begin(); it != results.end(); it++)
 	{
-		if ((it != poly1.begin()) && (it->get_coefficient() > 0))
+		if ((it != results.begin()) && (it->get_coefficient() > 0))
 		{
 			result_str.append("+");
 		}

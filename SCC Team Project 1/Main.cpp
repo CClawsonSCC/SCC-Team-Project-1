@@ -18,8 +18,12 @@ int main()
 {
 	Parser parser;
 
-	parser.assign_first("9x^2-x^2");
+	parser.assign_first("2");
 
+	parser.assign_second("-x");
+
+	parser.calculate_result();
+	
 	cout << parser.print() << endl;
 
 	system("pause");

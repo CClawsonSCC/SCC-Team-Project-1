@@ -22,7 +22,7 @@ private:
 	list<Term> poly2;
 	list<Term> results;
 	list<int> something;
-
+	
 	void read_input(const string, list<Term>&);
 	void insert(Term, list<Term>&);
 };
