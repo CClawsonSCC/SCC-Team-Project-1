@@ -61,7 +61,7 @@ string Parser::print()
 			result_str.append("+");
 		}
 
-		if ((it->get_coefficient() != 1) || (it->get_exponent() == 0))
+		if (((it->get_coefficient() != 1) && (it->get_coefficient() != -1)) || (it->get_exponent() == 0))
 		{
 			result_str.append(to_string(it->get_coefficient()));
 		}

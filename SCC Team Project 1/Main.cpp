@@ -18,9 +18,9 @@ int main()
 {
 	Parser parser;
 
-	parser.assign_first("2");
+	//parser.assign_first("1");
 
-	parser.assign_second("-x");
+	parser.assign_second("0x^0");
 
 	parser.calculate_result();
 	
