@@ -29,7 +29,6 @@ private:
 	list<Term> poly1;
 	list<Term> poly2;
 	list<Term> results;
-	list<int> something;
 
 	// Member functions.
 	void read_input(const string, list<Term>&);
